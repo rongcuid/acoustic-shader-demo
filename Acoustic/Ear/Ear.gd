@@ -21,14 +21,19 @@ onready var _right_tex = $RightView.get_texture()
 onready var _up_tex = $UpView.get_texture()
 onready var _down_tex = $DownView.get_texture()
 
-func _process(delta):
-	var v: = integrate_volume()
-	_source.set_volume(v)
-
 func set_listen(listen):
 	_source = get_node(listen)
 	listens_to = listen
 
+func update_viewport() -> void:
+	# TODO This is a hack to force update
+	$FrontView.render_target_update_mode = Viewport.UPDATE_ONCE
+	$BackView.render_target_update_mode = Viewport.UPDATE_ONCE
+	$LeftView.render_target_update_mode = Viewport.UPDATE_ONCE
+	$RightView.render_target_update_mode = Viewport.UPDATE_ONCE
+	$UpView.render_target_update_mode = Viewport.UPDATE_ONCE
+	$DownView.render_target_update_mode = Viewport.UPDATE_ONCE
+	
 func integrate_volume() -> float:
 	var volume: = 0.0
 	
@@ -47,13 +52,12 @@ func integrate_volume() -> float:
 	volume += _integrate_view(_up_tex, up_response)
 	volume += _integrate_view(_down_tex, down_response)
 	
-	clamp(volume, 0, 1)
+	volume = clamp(volume, 0, 1)
 	
 	return volume
 
-func _integrate_view(t: ViewportTexture, r: int) -> float:
+func _integrate_view(t: ViewportTexture, r: float) -> float:
 	var img: Image = t.get_data()
-
 	# TODO Make more generic
 	assert(not img.is_compressed())
 
@@ -64,4 +68,6 @@ func _integrate_view(t: ViewportTexture, r: int) -> float:
 	var sum: int = 0
 	for b in d:
 		sum += b
-	return sum * r / 256.0 / img.get_width() / img.get_height()
+	var partial = float(sum) * r / 256.0 / 32 / 32 # TODO Temporary
+
+	return partial

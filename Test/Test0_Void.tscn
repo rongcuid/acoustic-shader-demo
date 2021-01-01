@@ -18,3 +18,5 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.1778 )
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource( 1 )
+[connection signal="ready" from="Observer" to="Source" method="_on_Observer_ready"]
+[connection signal="volume_ready" from="Observer" to="Source" method="set_volume"]

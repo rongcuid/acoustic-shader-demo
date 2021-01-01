@@ -24,7 +24,6 @@ omni_attenuation = 2.0
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 2 )
-autoplay = true
 
 [node name="CSGBox" type="CSGBox" parent="."]
 layers = 1024

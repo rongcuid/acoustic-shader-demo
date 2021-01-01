@@ -8,7 +8,7 @@ script = ExtResource( 2 )
 
 [node name="FrontView" type="Viewport" parent="."]
 size = Vector2( 128, 128 )
-render_target_update_mode = 1
+render_target_update_mode = 3
 
 [node name="Camera" type="Camera" parent="FrontView"]
 cull_mask = 2147484672
@@ -19,7 +19,7 @@ far = 340.0
 
 [node name="UpView" type="Viewport" parent="."]
 size = Vector2( 128, 128 )
-render_target_update_mode = 1
+render_target_update_mode = 3
 
 [node name="Camera" type="Camera" parent="UpView"]
 transform = Transform( 1, 0, 0, 0, -1.62921e-07, -1, 0, 1, -1.62921e-07, 0, 0, 0 )
@@ -31,7 +31,7 @@ far = 340.0
 
 [node name="DownView" type="Viewport" parent="."]
 size = Vector2( 128, 128 )
-render_target_update_mode = 1
+render_target_update_mode = 3
 
 [node name="Camera" type="Camera" parent="DownView"]
 transform = Transform( 1, 0, 0, 0, -1.62921e-07, 1, 0, -1, -1.62921e-07, 0, 0, 0 )
@@ -43,7 +43,7 @@ far = 340.0
 
 [node name="LeftView" type="Viewport" parent="."]
 size = Vector2( 128, 128 )
-render_target_update_mode = 1
+render_target_update_mode = 3
 
 [node name="Camera" type="Camera" parent="LeftView"]
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 0, 0, 0 )
@@ -55,7 +55,7 @@ far = 340.0
 
 [node name="BackView" type="Viewport" parent="."]
 size = Vector2( 128, 128 )
-render_target_update_mode = 1
+render_target_update_mode = 3
 
 [node name="Camera" type="Camera" parent="BackView"]
 transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 0, 0, 0 )
@@ -67,7 +67,7 @@ far = 340.0
 
 [node name="RightView" type="Viewport" parent="."]
 size = Vector2( 128, 128 )
-render_target_update_mode = 1
+render_target_update_mode = 3
 
 [node name="Camera" type="Camera" parent="RightView"]
 transform = Transform( -1.62921e-07, 0, -1, 0, 1, 0, 1, 0, -1.62921e-07, 0, 0, 0 )

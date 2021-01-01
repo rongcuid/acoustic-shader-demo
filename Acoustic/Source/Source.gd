@@ -25,6 +25,5 @@ func _ready():
 	$AudioStreamPlayer.bus = bus
 	bus_index = AudioServer.get_bus_index(bus)
 	panner = AudioServer.get_bus_effect(bus_index, 0)
-
-func _on_Observer_ready():
+	yield(get_tree().create_timer(1.0), "timeout")
 	$AudioStreamPlayer.play()

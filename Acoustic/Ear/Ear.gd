@@ -25,24 +25,17 @@ func set_listen(listen):
 	_source = get_node(listen)
 	listens_to = listen
 
-func update_viewport() -> void:
-	# TODO This is a hack to force update
-	$FrontView.render_target_update_mode = Viewport.UPDATE_ONCE
-	$BackView.render_target_update_mode = Viewport.UPDATE_ONCE
-	$LeftView.render_target_update_mode = Viewport.UPDATE_ONCE
-	$RightView.render_target_update_mode = Viewport.UPDATE_ONCE
-	$UpView.render_target_update_mode = Viewport.UPDATE_ONCE
-	$DownView.render_target_update_mode = Viewport.UPDATE_ONCE
+#func update_viewport() -> void:
+#	# TODO This is a hack to force update
+#	$FrontView.render_target_update_mode = Viewport.UPDATE_ONCE
+#	$BackView.render_target_update_mode = Viewport.UPDATE_ONCE
+#	$LeftView.render_target_update_mode = Viewport.UPDATE_ONCE
+#	$RightView.render_target_update_mode = Viewport.UPDATE_ONCE
+#	$UpView.render_target_update_mode = Viewport.UPDATE_ONCE
+#	$DownView.render_target_update_mode = Viewport.UPDATE_ONCE
 	
 func integrate_volume() -> float:
 	var volume: = 0.0
-	
-#	# The light itself
-#	var v: Vector3 = global_transform.origin - _source.global_transform.origin
-#	var r: float = v.length()
-#	var vol0 = _source.get_node("AcousticLight").light_energy
-#	# Intensity falls off by inverse square; amplitude falls off by inverse
-#	volume = vol0 / r
 	
 	# Integrate reflections from each view
 	volume += _integrate_view(_front_tex, front_response)

@@ -25,7 +25,7 @@ func _process(_delta):
 		emit_signal("volume_ready", v_l, v_r)
 
 func update_ear(ear):
-	ear.update_viewport()
+#	ear.update_viewport()
 	var v: float = ear.integrate_volume()
 	return v
 

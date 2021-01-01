@@ -68,6 +68,6 @@ func _integrate_view(t: ViewportTexture, r: float) -> float:
 	var sum: int = 0
 	for b in d:
 		sum += b
-	var partial = float(sum) * r / 256.0 / 32 / 32 # TODO Temporary
+	var partial = float(sum) * r / 256.0 / 128 / 128 # TODO Temporary
 
 	return partial

@@ -1,6 +1,6 @@
 extends Spatial
 
-export var bus = "Acoustic L"
+export var bus = "Acoustic"
 var bus_index
 var panner
 

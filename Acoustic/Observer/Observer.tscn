@@ -10,9 +10,20 @@ script = ExtResource( 2 )
 [node name="Camera" type="Camera" parent="."]
 current = true
 
-[node name="Ear" parent="." instance=ExtResource( 1 )]
+[node name="LeftEar" parent="." instance=ExtResource( 1 )]
 
-[node name="EarView" parent="." instance=ExtResource( 3 )]
+[node name="RightEar" parent="." instance=ExtResource( 1 )]
+left_response = 0.25
+right_response = 1.0
+
+[node name="LeftEarView" parent="." instance=ExtResource( 3 )]
 margin_right = -768.0
 margin_bottom = -336.0
-ear = NodePath("../Ear")
+ear = NodePath("../LeftEar")
+
+[node name="RightEarView" parent="." instance=ExtResource( 3 )]
+margin_left = 770.26
+margin_top = 2.52267
+margin_right = 2.2605
+margin_bottom = -333.477
+ear = NodePath("../RightEar")

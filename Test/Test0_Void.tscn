@@ -8,10 +8,10 @@ background_mode = 1
 background_color = Color( 0.298039, 0.290196, 0.427451, 1 )
 ambient_light_energy = 0.0
 
-[node name="Spatial" type="Spatial"]
+[node name="Test0_Void" type="Spatial"]
 
 [node name="Observer" parent="." instance=ExtResource( 1 )]
-source = NodePath("../Source")
+source = NodePath("../../Test0_Void/Source")
 
 [node name="Source" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.1778 )

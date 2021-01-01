@@ -1,7 +1,15 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Acoustic/Source/Source.gd" type="Script" id=1]
 [ext_resource path="res://Acoustic/Source/morsecode_c23383793ff92bbc05ac1f0aba7ebe3a.wav" type="AudioStream" id=2]
+
+[sub_resource type="SpatialMaterial" id=1]
+albedo_color = Color( 0, 0, 0, 1 )
+emission_enabled = true
+emission = Color( 1, 1, 1, 1 )
+emission_energy = 1.0
+emission_operator = 0
+emission_on_uv2 = false
 
 [node name="Source" type="Spatial"]
 script = ExtResource( 1 )
@@ -10,9 +18,17 @@ script = ExtResource( 1 )
 layers = 1024
 light_bake_mode = 2
 light_cull_mask = 4293919744
+shadow_enabled = true
 omni_range = 20.0
 omni_attenuation = 2.0
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 2 )
-bus = "Acoustic Source 1"
+autoplay = true
+
+[node name="CSGBox" type="CSGBox" parent="."]
+layers = 1024
+width = 1.0
+height = 1.0
+depth = 1.0
+material = SubResource( 1 )

@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Acoustic/Source/Source.gd" type="Script" id=1]
+[ext_resource path="res://Acoustic/Source/morsecode_c23383793ff92bbc05ac1f0aba7ebe3a.wav" type="AudioStream" id=2]
+
+[node name="Source" type="Spatial"]
+script = ExtResource( 1 )
+
+[node name="AcousticLight" type="OmniLight" parent="."]
+layers = 1024
+light_bake_mode = 2
+light_cull_mask = 4293919744
+omni_range = 20.0
+omni_attenuation = 2.0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+bus = "Acoustic Source 1"

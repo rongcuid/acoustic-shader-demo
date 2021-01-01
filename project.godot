@@ -21,11 +21,22 @@ _global_script_class_icons={
 [application]
 
 config/name="Acoustic_Shader"
+run/main_scene="res://Test/Test0_Void.tscn"
 config/icon="res://icon.png"
+
+[display]
+
+window/size/width=1280
+window/size/height=720
 
 [gdnative]
 
 singletons=[ "res://git_api.gdnlib" ]
+
+[layer_names]
+
+3d_render/layer_1="graphics"
+3d_render/layer_11="acoustic"
 
 [rendering]
 

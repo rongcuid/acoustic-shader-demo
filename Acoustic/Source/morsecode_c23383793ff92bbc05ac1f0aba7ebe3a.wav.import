@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/morsecode_c23383793ff92bbc05ac1f0aba7ebe3a.wav-39e2b96d37f21eba0601aa2388f7c057.sample"
+
+[deps]
+
+source_file="res://Acoustic/Source/morsecode_c23383793ff92bbc05ac1f0aba7ebe3a.wav"
+dest_files=[ "res://.import/morsecode_c23383793ff92bbc05ac1f0aba7ebe3a.wav-39e2b96d37f21eba0601aa2388f7c057.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -76,3 +76,26 @@ environment = ExtResource( 1 )
 current = true
 fov = 90.0
 far = 340.0
+
+[node name="FrontXForm" type="RemoteTransform" parent="."]
+remote_path = NodePath("../FrontView/Camera")
+
+[node name="UpXForm" type="RemoteTransform" parent="."]
+transform = Transform( 1, 0, 0, 0, -1.62921e-07, -1, 0, 1, -1.62921e-07, 0, 0, 0 )
+remote_path = NodePath("../UpView/Camera")
+
+[node name="DownXForm" type="RemoteTransform" parent="."]
+transform = Transform( 1, 0, 0, 0, -1.62921e-07, 1, 0, -1, -1.62921e-07, 0, 0, 0 )
+remote_path = NodePath("../DownView/Camera")
+
+[node name="BackXForm" type="RemoteTransform" parent="."]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 0, 0, 0 )
+remote_path = NodePath("../BackView/Camera")
+
+[node name="LeftXForm" type="RemoteTransform" parent="."]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 0, 0, 0 )
+remote_path = NodePath("../LeftView/Camera")
+
+[node name="RightXForm" type="RemoteTransform" parent="."]
+transform = Transform( -1.62921e-07, 0, -1, 0, 1, 0, 1, 0, -1.62921e-07, 0, 0, 0 )
+remote_path = NodePath("../RightView/Camera")

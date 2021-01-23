@@ -32,7 +32,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.1778 )
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource( 1 )
 
-[node name="CSGBox" type="CSGBox" parent="."]
+[node name="Reflector" type="CSGBox" parent="."]
 layers = 1025
 width = 4.46322
 height = 4.20671

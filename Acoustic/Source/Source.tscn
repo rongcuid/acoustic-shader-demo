@@ -11,7 +11,12 @@ emission_energy = 1.0
 emission_operator = 0
 emission_on_uv2 = false
 
-[node name="Source" type="Spatial"]
+[node name="Source" type="CSGBox"]
+layers = 1024
+width = 1.0
+height = 1.0
+depth = 1.0
+material = SubResource( 1 )
 script = ExtResource( 1 )
 
 [node name="AcousticLight" type="OmniLight" parent="."]
@@ -25,10 +30,3 @@ omni_attenuation = 2.0
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 2 )
 bus = "Acoustic"
-
-[node name="CSGBox" type="CSGBox" parent="."]
-layers = 1024
-width = 1.0
-height = 1.0
-depth = 1.0
-material = SubResource( 1 )

@@ -12,7 +12,7 @@ func set_volume(l, r) -> void:
 	NOTE: Not power, not dB!
 	"""
 	var volume = l + r
-	assert(volume != 0.0)
+#	assert(volume != 0.0)
 	l /= volume
 	r /= volume
 	var pan = r - l

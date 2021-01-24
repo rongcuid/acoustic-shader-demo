@@ -15,6 +15,7 @@ cull_mask = 2147484672
 environment = ExtResource( 1 )
 current = true
 fov = 90.0
+near = 0.01
 far = 340.0
 
 [node name="UpView" type="Viewport" parent="."]
@@ -27,6 +28,7 @@ cull_mask = 2147484672
 environment = ExtResource( 1 )
 current = true
 fov = 90.0
+near = 0.01
 far = 340.0
 
 [node name="DownView" type="Viewport" parent="."]
@@ -39,6 +41,7 @@ cull_mask = 2147484672
 environment = ExtResource( 1 )
 current = true
 fov = 90.0
+near = 0.01
 far = 340.0
 
 [node name="LeftView" type="Viewport" parent="."]
@@ -51,6 +54,7 @@ cull_mask = 2147484672
 environment = ExtResource( 1 )
 current = true
 fov = 90.0
+near = 0.01
 far = 340.0
 
 [node name="BackView" type="Viewport" parent="."]
@@ -63,6 +67,7 @@ cull_mask = 2147484672
 environment = ExtResource( 1 )
 current = true
 fov = 90.0
+near = 0.01
 far = 340.0
 
 [node name="RightView" type="Viewport" parent="."]
@@ -75,6 +80,7 @@ cull_mask = 2147484672
 environment = ExtResource( 1 )
 current = true
 fov = 90.0
+near = 0.01
 far = 340.0
 
 [node name="FrontXForm" type="RemoteTransform" parent="."]

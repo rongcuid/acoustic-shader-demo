@@ -10,6 +10,7 @@
 [ext_resource path="res://Test/Test1/WindowFrame_Acoustic.material" type="Material" id=8]
 
 [sub_resource type="SpatialMaterial" id=2]
+roughness = 0.59
 normal_enabled = true
 normal_scale = 1.0
 normal_texture = ExtResource( 3 )

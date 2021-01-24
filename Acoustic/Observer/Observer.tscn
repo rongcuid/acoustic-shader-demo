@@ -7,17 +7,19 @@
 [node name="Observer" type="Spatial"]
 script = ExtResource( 2 )
 
-[node name="Camera" type="Camera" parent="."]
+[node name="PitchAxis" type="Spatial" parent="."]
+
+[node name="Camera" type="Camera" parent="PitchAxis"]
 cull_mask = 1
 current = true
 
-[node name="LeftEar" parent="." instance=ExtResource( 1 )]
+[node name="LeftEar" parent="PitchAxis" instance=ExtResource( 1 )]
 
-[node name="RightEar" parent="." instance=ExtResource( 1 )]
+[node name="RightEar" parent="PitchAxis" instance=ExtResource( 1 )]
 left_response = 0.25
 right_response = 1.0
 
-[node name="ForwardRay" type="RayCast" parent="."]
+[node name="ForwardRay" type="RayCast" parent="PitchAxis"]
 cast_to = Vector3( 0, 0, -2 )
 
 [node name="UI" type="Control" parent="."]
@@ -34,11 +36,11 @@ margin_right = 512.0
 margin_bottom = 384.0
 size_flags_horizontal = 0
 size_flags_vertical = 0
-ear = NodePath("../../LeftEar")
+ear = NodePath("../../PitchAxis/LeftEar")
 
 [node name="RightEarView" parent="UI" instance=ExtResource( 3 )]
 anchor_left = 1.0
 anchor_bottom = 0.0
 margin_left = -512.0
 margin_bottom = 384.0
-ear = NodePath("../../RightEar")
+ear = NodePath("../../PitchAxis/RightEar")

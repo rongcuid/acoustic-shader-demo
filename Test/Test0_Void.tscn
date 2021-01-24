@@ -42,4 +42,3 @@ height = 4.20671
 depth = 1.7835
 material = SubResource( 2 )
 script = SubResource( 3 )
-[connection signal="volume_ready" from="Observer" to="Source" method="set_volume"]

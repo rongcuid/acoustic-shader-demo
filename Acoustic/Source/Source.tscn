@@ -24,7 +24,7 @@ light_bake_mode = 2
 light_cull_mask = 4293919744
 shadow_enabled = true
 omni_range = 20.0
-omni_attenuation = 2.0
+omni_attenuation = 4.14105
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 bus = "Acoustic"

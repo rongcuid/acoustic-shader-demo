@@ -4,7 +4,7 @@
 
 [resource]
 flags_transparent = true
-albedo_color = Color( 1, 1, 1, 0.854902 )
+albedo_color = Color( 1, 1, 1, 0.960784 )
 roughness = 0.29
 normal_enabled = true
 normal_scale = 1.0

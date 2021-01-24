@@ -5,8 +5,7 @@ export(bool) var render_acoustic = false
 
 var vel = Vector3()
 var dir = Vector3()
-const MAX_SPEED = 20
-const JUMP_SPEED = 18
+const MAX_SPEED = 5
 const ACCEL = 4.5
 const DEACCEL= 16
 const MAX_SLOPE_ANGLE = 40
@@ -44,6 +43,7 @@ func _process(_delta):
 	if v_r != 0.0:
 		_volume_r = v_r
 	if v_l != 0.0 && v_r != 0.0:
+#		print_debug(v_l,",",v_r)
 		emit_signal("volume_ready", v_l, v_r)
 
 func _physics_process(delta):
@@ -90,12 +90,12 @@ func process_movement(delta):
 
 	vel.y = 0
 
-	var hvel = vel
-	hvel.y = 0
 
 	var target = dir
 	target *= MAX_SPEED
 
+	var hvel = vel
+	hvel.y = 0
 	var accel
 	if dir.dot(hvel) > 0:
 		accel = ACCEL
@@ -106,7 +106,8 @@ func process_movement(delta):
 	vel.x = hvel.x
 	vel.z = hvel.z
 	#vel = move_and_slide(vel, Vector3(0, 1, 0), 0.05, 4, deg2rad(MAX_SLOPE_ANGLE))
-	translate_object_local(vel * delta)
+
+	global_translate(vel * delta)
 
 func _input(event):
 	if event is InputEventMouseMotion and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:

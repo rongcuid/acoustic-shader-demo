@@ -14,10 +14,15 @@ cull_mask = 1
 current = true
 
 [node name="LeftEar" parent="PitchAxis" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1, 0, 0 )
+right_response = 0.05
+back_response = 0.1
 
 [node name="RightEar" parent="PitchAxis" instance=ExtResource( 1 )]
-left_response = 0.25
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 0, 0 )
+left_response = 0.05
 right_response = 1.0
+back_response = 0.2
 
 [node name="ForwardRay" type="RayCast" parent="PitchAxis"]
 cast_to = Vector3( 0, 0, -2 )

@@ -22,7 +22,7 @@ light_bake_mode = 2
 light_cull_mask = 4293919744
 shadow_enabled = true
 omni_range = 20.0
-omni_attenuation = 3.03143
+omni_attenuation = 3.249
 
 [node name="NearField" type="OmniLight" parent="."]
 layers = 1024

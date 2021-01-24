@@ -5,7 +5,7 @@ export(bool) var render_acoustic = false
 
 var vel = Vector3()
 var dir = Vector3()
-const MAX_SPEED = 5
+const MAX_SPEED = 1
 const ACCEL = 4.5
 const DEACCEL= 16
 const MAX_SLOPE_ANGLE = 40

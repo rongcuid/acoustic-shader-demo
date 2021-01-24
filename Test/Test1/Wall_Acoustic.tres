@@ -1,0 +1,10 @@
+[gd_resource type="SpatialMaterial" load_steps=2 format=2]
+
+[ext_resource path="res://assets/textures/Stylized_Wood_Planks_001_normal.jpg" type="Texture" id=1]
+
+[resource]
+flags_transparent = true
+albedo_color = Color( 1, 1, 1, 0.854902 )
+normal_enabled = true
+normal_scale = 1.0
+normal_texture = ExtResource( 1 )

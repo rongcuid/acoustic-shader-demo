@@ -7,3 +7,5 @@ build/
 lib/
 
 .mono/
+
+*.blend1

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Corpse_Party_Piano_Room.ogg-af00e2e406ad7a4d8ee400703174245e.oggstr"
+
+[deps]
+
+source_file="res://assets/Corpse_Party_Piano_Room.ogg"
+dest_files=[ "res://.import/Corpse_Party_Piano_Room.ogg-af00e2e406ad7a4d8ee400703174245e.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Acoustic/Observer/Observer.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Acoustic/Source/Source.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Acoustic/Source/morsecode_c23383793ff92bbc05ac1f0aba7ebe3a.wav" type="AudioStream" id=3]
 
 [sub_resource type="Environment" id=1]
 background_mode = 1
@@ -25,9 +26,11 @@ func _process(delta):
 
 [node name="Observer" parent="." instance=ExtResource( 1 )]
 source = NodePath("../../Test0_Void/Source")
+render_acoustic = true
 
 [node name="Source" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.1778 )
+stream = ExtResource( 3 )
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource( 1 )

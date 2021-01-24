@@ -1,6 +1,7 @@
 extends Spatial
 
 export var bus = "Acoustic"
+export(AudioStream) var stream
 var bus_index
 var panner
 
@@ -23,6 +24,7 @@ func set_volume(l, r) -> void:
 
 func _ready():
 	$AudioStreamPlayer.bus = bus
+	$AudioStreamPlayer.stream = stream
 	bus_index = AudioServer.get_bus_index(bus)
 	panner = AudioServer.get_bus_effect(bus_index, 0)
 	yield(get_tree().create_timer(1.0), "timeout")

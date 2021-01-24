@@ -43,7 +43,7 @@ func _process(_delta):
 	if v_r != 0.0:
 		_volume_r = v_r
 	if v_l != 0.0 && v_r != 0.0:
-#		print_debug(v_l,",",v_r)
+		print_debug(v_l,",",v_r)
 		emit_signal("volume_ready", v_l, v_r)
 
 func _physics_process(delta):

@@ -21,7 +21,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Acoustic_Shader"
-run/main_scene="res://Test/Test0_Void.tscn"
+run/main_scene="res://Test/Test1_Classroom.tscn"
 config/icon="res://icon.png"
 
 [display]
